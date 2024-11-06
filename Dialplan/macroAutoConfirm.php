@@ -16,7 +16,7 @@ class macroAutoConfirm{
         */
         $context = 'macro-auto-confirm';
         $exten = 's';
-        $ext->add($context, $exten, '', new \ext_setvar('__MACRO_RESULT',''));
+        $ext->add($context, $exten, '', new \ext_setvar('__GOSUB_RESULT',''));
         $ext->add($context, $exten, '', new \ext_set('CFIGNORE',''));
         $ext->add($context, $exten, '', new \ext_set('MASTER_CHANNEL(CFIGNORE)',''));
         $ext->add($context, $exten, '', new \ext_set('FORWARD_CONTEXT','from-internal'));
