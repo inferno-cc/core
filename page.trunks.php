@@ -429,10 +429,7 @@ if (!$tech && !$extdisplay) {
 				if (empty($peerdetails)) {
 					$peerdetails = core_trunks_getTrunkPeerDetails($trunknum);
 				}
-				if (empty($usercontext)) {
-					$usercontext = htmlentities($trunk_details['usercontext'],ENT_COMPAT | ENT_HTML401, "UTF-8");
-				}
-
+				$usercontext = !empty($trunk_details['usercontext']) ? htmlentities($trunk_details['usercontext'], ENT_COMPAT | ENT_HTML401, "UTF-8") : '';
 				if (empty($userconfig)) {
 					$userconfig = core_trunks_getTrunkUserConfig($trunknum);
 				}
