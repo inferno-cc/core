@@ -26,7 +26,7 @@
 	<database>
 		<table name="trunks">
 			<field name="trunkid" type="integer" default="0" primaryKey="true"/>
-			<field name="name" type="string" length="50" default=""/>
+			<field name="name" type="string" length="255" default=""/>
 			<field name="tech" type="string" length="20" primaryKey="true"/>
 			<field name="outcid" type="string" length="255" default=""/>
 			<field name="keepcid" type="string" length="4" default="off" notnull="false"/>
