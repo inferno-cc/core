@@ -521,7 +521,7 @@ class PJSip extends \FreePBX\modules\Core\Drivers\Sip {
 
 			// Have we been asked to send registrations?
 			if ($trunk['registration'] === "send") {
-				$retries = abs((int) $trunk['max_retries']);
+				$retries = isset($trunk['max_retries']) ? abs((int) $trunk['max_retries']):10000;
 				// Sane limit.
 				if ($retries > 1000000) {
 					$retries = 1000000;
