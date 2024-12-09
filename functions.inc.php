@@ -3807,7 +3807,7 @@ function core_do_get_config($engine) {
 	$ext->add($mcontext,$exten,'init', new ext_set('__BLKVM_CHANNEL','${CHANNEL}'));
 	$ext->add($mcontext,$exten,'', new ext_set('SHARED(BLKVM,${BLKVM_CHANNEL})','TRUE'));
 	$ext->add($mcontext,$exten,'', new ext_set('GOSUB_RETVAL','TRUE'));
-	$ext->add($mcontext,$exten,'', new ext_macroexit(''));
+	$ext->add($mcontext,$exten,'', new ext_return('${GOSUB_RETVAL}'));
 
 	// If BLKVM_CHANNEL not set or 'reset' is passed, then initialize it to this channel then set and retrun TRUE
 	//
@@ -3815,7 +3815,7 @@ function core_do_get_config($engine) {
 	$ext->add($mcontext,$exten,'', new ext_execif('$[!${EXISTS(${BLKVM_CHANNEL})} | "{ARG1}" = "reset"]', 'Set','__BLKVM_CHANNEL=${CHANNEL}'));
 	$ext->add($mcontext,$exten,'', new ext_set('SHARED(BLKVM,${BLKVM_CHANNEL})','TRUE'));
 	$ext->add($mcontext,$exten,'', new ext_set('GOSUB_RETVAL','TRUE'));
-	$ext->add($mcontext,$exten,'', new ext_macroexit(''));
+	$ext->add($mcontext,$exten,'', new ext_return('${GOSUB_RETVAL}'));
 
 	// if clearing, BLKVM_CHANNEL should already exist (if not, we clear our channel's copy)
 	//
