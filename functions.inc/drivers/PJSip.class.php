@@ -1130,7 +1130,7 @@ class PJSip extends \FreePBX\modules\Core\Drivers\Sip {
 		$endpoint = $auth = $aor = $identify = array();
 
 		// With pjsip, we need three sections.
-		$endpointname = $config['account'] ?? '';
+		$endpointname = $config['account'] ?? $config['id'];
 		$endpoint[] = "type=endpoint";
 		$authname = "$endpointname-auth";
 		$identifyname = "$endpointname-identify";
