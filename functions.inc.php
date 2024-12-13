@@ -3803,7 +3803,7 @@ function core_do_get_config($engine) {
 	$mcontext = 'macro-blkvm-setifempty';
 	$ext->add($mcontext,$exten,'', new ext_gotoif('$[!${EXISTS(${BLKVM_CHANNEL})}]', 'init'));
 	$ext->add($mcontext,$exten,'', new ext_set('GOSUB_RETVAL','${SHARED(BLKVM,${BLKVM_CHANNEL})}'));
-	$ext->add($mcontext,$exten,'', new ext_macroexit(''));
+	$ext->add($mcontext,$exten,'', new ext_return('${GOSUB_RETVAL}'));
 	$ext->add($mcontext,$exten,'init', new ext_set('__BLKVM_CHANNEL','${CHANNEL}'));
 	$ext->add($mcontext,$exten,'', new ext_set('SHARED(BLKVM,${BLKVM_CHANNEL})','TRUE'));
 	$ext->add($mcontext,$exten,'', new ext_set('GOSUB_RETVAL','TRUE'));
