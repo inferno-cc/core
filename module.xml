@@ -3,13 +3,14 @@
 	<repo>standard</repo>
 	<category>Applications</category>
 	<name>Core</name>
-	<version>17.0.18.9</version>
+	<version>17.0.18.10</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<candisable>no</candisable>
 	<canuninstall>no</canuninstall>
 	<changelog>
+		*17.0.18.10* Fixing Github #613 
 		*17.0.18.9* FREEI-1528 apply config error in Freepbx17 
 		*17.0.18.8* Github#542 increasing length of trunk name field 
 		*17.0.18.2* Github #482 Adding allow_unauthenticated_options config option
