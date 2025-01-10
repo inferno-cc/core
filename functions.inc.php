@@ -3582,7 +3582,7 @@ function core_do_get_config($engine) {
 	$mcontext = 'macro-exten-vm';
 	$exten = 's';
 
-	$ext->add($mcontext,$exten,'', new ext_macro('user-callerid'));
+	$ext->add($mcontext,$exten,'', new ext_macro('user-callerid','${ARG1},${ARG2},,,,macro-exten-vm'));
 	$ext->add($mcontext,$exten,'', new ext_set("RingGroupMethod", 'none'));
 	$ext->add($mcontext,$exten,'', new ext_set("__EXTTOCALL", '${ARG2}'));
 	$ext->add($mcontext,$exten,'', new ext_set("__PICKUPMARK", '${ARG2}'));
