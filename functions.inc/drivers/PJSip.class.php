@@ -528,7 +528,7 @@ class PJSip extends \FreePBX\modules\Core\Drivers\Sip {
 				}
 				$conf['pjsip.registration.conf'][$tn] = array(
 					'type' => 'registration',
-					'transport' => $trunk['transport'],
+					'transport' => !empty($trunk['transport']) ? $trunk['transport'] : 'udp',
 					'outbound_auth' => $tn,
 					'retry_interval' => $trunk['retry_interval'],
   					'fatal_retry_interval' => (empty($trunk['fatal_retry_interval']))? "0" : $trunk['fatal_retry_interval'],
