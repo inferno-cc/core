@@ -4770,6 +4770,10 @@ class Core extends FreePBX_Helpers implements BMO  {
 					}
 					if($key == 'callwaiting') {
 						$astman->database_put("CW",$ext,strtoupper($value));
+					} else if($key == 'dialopts') {
+						if($value) {
+							$astman->database_put("AMPUSER",$ext."/".$key,$value);
+						}
 					} else {
 						$astman->database_put("AMPUSER",$ext."/".$key,$value);
 					}
