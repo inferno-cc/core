@@ -3,13 +3,14 @@
 	<repo>standard</repo>
 	<category>Applications</category>
 	<name>Core</name>
-	<version>17.0.18.12</version>
+	<version>17.0.18.13</version>
 	<publisher>Sangoma Technologies Corporation</publisher>
 	<license>GPLv3+</license>
 	<licenselink>http://www.gnu.org/licenses/gpl-3.0.txt</licenselink>
 	<candisable>no</candisable>
 	<canuninstall>no</canuninstall>
 	<changelog>
+		*17.0.18.13* Fixing Github #611 Empty dialopts astdb key after backup restore issue 
 		*17.0.18.12* Fixing Github #620 undefined transport key error 
 		*17.0.18.11* #530 Passing ARG to the macro-user-callerid subroutine to make the accountcode module work 
 		*17.0.18.10* Fixing Github #613 
