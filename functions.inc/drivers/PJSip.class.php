@@ -96,7 +96,7 @@ class PJSip extends \FreePBX\modules\Core\Drivers\Sip {
 				"flag" => $flag++
 			),
 			"send_connected_line" => array(
-				"value" => "no",
+				"value" => "yes",
 				"flag" => $flag++
 			),
 			"user_eq_phone" => array(
